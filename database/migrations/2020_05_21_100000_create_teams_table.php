@@ -17,6 +17,7 @@ class CreateTeamsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->index();
             $table->string('name');
+            $table->text('forge_token')->nullable();
             $table->boolean('personal_team');
             $table->timestamps();
         });
